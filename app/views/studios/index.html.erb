@@ -1,16 +1,16 @@
 <div class="container">
 
   <div>
-      <!-- for the filters -->
-      <div>
-          <!-- location filter -->
-      </div>
-      <div>
-          <!-- category filter -->
-      </div>
-      <div>
-          <!-- time filter -->
-      </div>
+    <!-- for the filters -->
+    <div>
+        <!-- location filter -->
+    </div>
+    <div>
+        <!-- category filter -->
+    </div>
+    <div>
+        <!-- time filter -->
+    </div>
   </div>
 
   <div class="d-flex">
@@ -33,20 +33,20 @@
 
           <div class=" d-flex sessions-card">
             <% studio.sessions.order("time").each do |session| %>
-            <div>
-              <ul class="flex-column session-card p-0 m-0">
-                <div class="session-info-card">
-                <p><%= session.name %></p>
-                <p><%= session.time %></p>
-                <%= link_to "", session_path(session), class: 'session-info-card-link' %>
-                </div>
-                <div>
-                <%= simple_form_for [session, Booking.new] do |f| %>
-                  <%= f.submit "Book", class: 'booking-btn' %>
-                <% end %>
-                </div>
-              </ul>
-            </div>
+              <div>
+                <ul class="flex-column session-card p-0 m-0">
+                  <div class="session-info-card">
+                  <p><%= session.name %></p>
+                  <p><%= session.time %></p>
+                  <%= link_to "", session_path(session), class: 'session-info-card-link' %>
+                  </div>
+                  <div>
+                  <%= simple_form_for [session, Booking.new] do |f| %>
+                    <%= f.submit "Book", class: 'booking-btn' %>
+                  <% end %>
+                  </div>
+                </ul>
+              </div>
             <% end %>
           </div>
 
