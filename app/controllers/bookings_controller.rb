@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :delete]
+  before_action :set_booking, only: [:show, :destroy]
 
   def index
     @bookings = Booking.all
@@ -21,9 +21,9 @@ class BookingsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @booking.destroy
-    redirect_to booking_path(@booking)
+    redirect_to bookings_path
   end
 
   private
