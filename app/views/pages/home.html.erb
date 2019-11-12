@@ -1,0 +1,13 @@
+
+<div class="home-video-wrapper">
+  <%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, controls: :true, class: "home_video" %>
+  <h1 class="home"> Every class with one fitness pass in Tokyo</h1>
+  <p class="home">You probably don't want to commit to one gym?</p>
+  <p class="home">Join us and work out at any gym, try any workout and do it all with one pass.</p>
+  <%= simple_form_for :search, url: studios_path, method: "GET" do |f| %>
+  <%= f.input_field :location, collection: ["Meguro", "Shinjuku", "Harajuku", "Ginza"] %>
+  <%= submit :search %>
+end
+  <a class="btn btn-ghost" href="#">Discover classes</a>
+</div>
+

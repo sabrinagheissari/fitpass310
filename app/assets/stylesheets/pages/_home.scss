@@ -1,0 +1,48 @@
+.home_video {
+ width: 100vw;
+ height: 100vh;
+ position: absolute;
+ display: flex;
+ justify-content: center;
+ object-fit: cover;
+ top: 0;
+ z-index: -2;
+}
+
+.home-video-wrapper {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+h1.home {
+  color: white;
+  margin: Opx;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 38px;
+}
+
+p.home {
+  color: white;
+  font-size: 20px;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  padding-left: 38px;
+}
+
+.btn-ghost {
+  color: white;
+  border: 2px solid white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  margin: 38px;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
+
+
