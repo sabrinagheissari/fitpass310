@@ -1,0 +1,15 @@
+.carousel{
+  margin: auto;
+  width: 25rem;
+}
+
+.carousel-control-next-icon {
+  background-image: none !important;
+}
+.carousel-control-next-icon:after {
+    content: ">";
+    color: black;
+    weight: 800;
+    font-size: 2em;
+    position: absolute;
+}
