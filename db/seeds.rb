@@ -27,7 +27,7 @@ Studio.create! ({
 
 Studio.create! ({
   name: "Noah's Archs",
-  address: "Harujuku",
+  address: "Harajuku",
   category: "Gymnastics",
   remote_photo_url: "https://images.unsplash.com/photo-1495555687398-3f50d6e79e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
   })
