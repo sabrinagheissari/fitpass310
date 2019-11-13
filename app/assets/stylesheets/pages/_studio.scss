@@ -1,16 +1,15 @@
-.studios-container {
-  margin-left: 64px !important;
-  margin-right: 64px !important;
-  border: solid 1px green;
-  border-radius: 16px;
-}
+// .studios-container {
+//   margin-left: 64px !important;
+//   margin-right: 64px !important;
+// }
 
 .map-card {
   flex: 2;
+  height: 100%;
 }
 
 .all-studios {
-  flex: 3;
+  flex: 1;
 }
 
 .studio-card {
@@ -23,7 +22,7 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  min-height: 120px;
+  min-height: 150px;
 }
 
 .studio-card-link {
