@@ -1,0 +1,17 @@
+.buttons {
+  background: darken($light, 10%);
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: 22px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    background: $rose;
+    transition: all .4s ease-in-out;
+  }
+}
