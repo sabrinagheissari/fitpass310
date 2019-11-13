@@ -7,8 +7,11 @@
     <p><%=@course.difficulty.upcase%></p>
     <p><%=@course.time%></p>
     <p><%=@course.duration%> min</p>
-    <p><%=@course.teacher_name%></p>
     <h4><%=@course.price%>$</h4>
-    <a href="#"class="btn btn-rose">Book</a>
+    <%= simple_form_for [@course, Booking.new] do |f| %>
+    <%= f.submit "Book", class: 'btn btn-rose' %>
+    <% end %>
   </div>
 </div>
+
+
