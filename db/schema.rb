@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 2019_11_13_013039) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "description"
     t.string "photo"
+    t.text "description"
   end
 
   create_table "users", force: :cascade do |t|
