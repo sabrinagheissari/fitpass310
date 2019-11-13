@@ -1,28 +1,29 @@
-// .container {
-//   padding: 0 !important;
-//   margin: 0 !important;
-// }
+.studios-container {
+  margin-left: 64px !important;
+  margin-right: 64px !important;
+  border: solid 1px green;
+  border-radius: 16px;
+}
 
 .map-card {
-  width: 100px;
-  margin: 8px;
+  flex: 2;
 }
 
 .all-studios {
-  margin: 8px;
-  padding: 8px;
+  flex: 3;
 }
 
 .studio-card {
+  display: flex;
   position: relative;
-  height: 100%;
-  width: 100px;
   background-size: cover;
   text-align: center;
+  color: white;
+  font-size: 16px;
   align-items: center;
   justify-content: center;
-  border: solid 1px black;
   flex: 1;
+  min-height: 120px;
 }
 
 .studio-card-link {
@@ -34,20 +35,31 @@
 
 .courses-card {
   overflow: scroll;
-  width: 70%;
-  flex: 3;
+  flex: 5;
 }
 
 .course-card {
   height: 100%;
-  width: 200px;
+  min-width: 200px;
   background-size: cover;
-  border: solid 1px red;
-  align-items: space-between;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .course-info-card {
+  height: 100%;
+  font-size: 14px;
+  color: #5F6769;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .course-info-card-link {
@@ -57,6 +69,23 @@
   height: 100%;
 }
 
+.course-info-card:hover {
+  background-color: #E2C3C3;
+  color: white;
+}
+
 .booking-btn {
   width: 100%;
+  color: white;
+  background: $rose;
+  border: 1px solid $rose;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
+
+.booking-btn:hover {
+  opacity: 1;
+  color: $light-gray;
+}
+
+
