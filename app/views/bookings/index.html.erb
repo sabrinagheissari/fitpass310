@@ -1,9 +1,25 @@
-<h1>My Bookings</h1>
+<div class=booking_container>
+  <h1 class="text-center mt-3">My Bookings</h1>
+    <div class="icons-booking">
+    <%= link_to root_path do %>
+    <i class="fas fa-home"></i>
+    <% end %>
+    <%= link_to studios_path do %>
+    <i class="fas fa-backward"></i>
+    <% end %>
+    </div>
+      <% @bookings.each do |booking| %>
+        <div class="card-my-booking">
+            <div class="card-booking-informations">
+                  <h2><strong>Class name</strong> : <%= booking.course.name %></h2>
+                  <h2><strong>When? : </strong><%= booking.course.time %></h2>
+                  <%= link_to booking_path(booking), method: :delete, data: {confirm: "Are you sure?"} do %>
+                    <i class="far fa-trash-alt icon-rose"></i>
+                  <% end %>
+            </div>
+        </div>
+     <% end %>
+</div>
 
-<% @bookings.each do |booking| %>
-  <%= booking.course.name %>
-  <%= booking.course.time %>
-  <%= link_to booking_path(booking), method: :delete, data: {confirm: "Are you sure?"} do %>
-    <i class="far fa-trash-alt"></i>
-  <% end %>
-<% end %>
+
+
