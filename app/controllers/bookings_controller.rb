@@ -11,13 +11,16 @@ class BookingsController < ApplicationController
 
   def create
     @course = Course.find(params[:course_id])
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(session: Session.find(params[:session_id]))
     @booking.course = @course
     @booking.user = current_user
+    # TODO : change this for curent user once devise is done !!!!
+    # @booking.user = User.first
     if @booking.save
-      redirect_to booking_path(@booking)
-      # else
-      # render :controller => "studios", :action => :index
+      redirect_to bookings_path
+    else
+      @studios = Studio.all
+      render 'studios/index'
     end
   end
 
@@ -30,9 +33,5 @@ class BookingsController < ApplicationController
 
   def set_booking
     @booking = Booking.find(params[:id])
-  end
-
-  def booking_params
-    params.require(:booking).permit(:course_id, :user_id)
   end
 end
