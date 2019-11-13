@@ -1,0 +1,62 @@
+// .container {
+//   padding: 0 !important;
+//   margin: 0 !important;
+// }
+
+.map-card {
+  width: 100px;
+  margin: 8px;
+}
+
+.all-studios {
+  margin: 8px;
+  padding: 8px;
+}
+
+.studio-card {
+  position: relative;
+  height: 100%;
+  width: 100px;
+  background-size: cover;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px black;
+  flex: 1;
+}
+
+.studio-card-link {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sessions-card {
+  overflow: scroll;
+  width: 70%;
+  flex: 3;
+}
+
+.session-card {
+  height: 100%;
+  width: 200px;
+  background-size: cover;
+  border: solid 1px red;
+  align-items: space-between;
+}
+
+.session-info-card {
+  position: relative;
+}
+
+.session-info-card-link {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.booking-btn {
+  width: 100%;
+}
