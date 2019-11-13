@@ -14,7 +14,7 @@
   </div>
 
   <div class="d-flex">
-      <!-- overall container for map, studios and sessions -->
+      <!-- overall container for map, studios and courses -->
     <div class="map-card">
       <p>MAP</p>
         <!-- map container -->
@@ -32,17 +32,17 @@
             <%= link_to "", studio_path(studio), class: 'studio-card-link' %>
           </div>
 
-          <div class=" d-flex sessions-card">
-            <% studio.sessions.order("time").each do |session| %>
+          <div class=" d-flex courses-card">
+            <% studio.courses.order("time").each do |course| %>
               <div>
-                <ul class="flex-column session-card p-0 m-0">
-                  <div class="session-info-card">
-                  <p><%= session.name %></p>
-                  <p><%= session.time %></p>
-                  <%= link_to "", session_path(session), class: 'session-info-card-link' %>
+                <ul class="flex-column course-card p-0 m-0">
+                  <div class="course-info-card">
+                  <p><%= course.name %></p>
+                  <p><%= course.time %></p>
+                  <%= link_to "", course_path(course), class: 'course-info-card-link' %>
                   </div>
                   <div>
-                  <%= simple_form_for [session, Booking.new] do |f| %>
+                  <%= simple_form_for [course, Booking.new] do |f| %>
                     <%= f.submit "Book", class: 'booking-btn' %>
                   <% end %>
                   </div>
