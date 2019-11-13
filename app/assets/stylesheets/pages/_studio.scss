@@ -32,13 +32,13 @@
   height: 100%;
 }
 
-.sessions-card {
+.courses-card {
   overflow: scroll;
   width: 70%;
   flex: 3;
 }
 
-.session-card {
+.course-card {
   height: 100%;
   width: 200px;
   background-size: cover;
@@ -46,11 +46,11 @@
   align-items: space-between;
 }
 
-.session-info-card {
+.course-info-card {
   position: relative;
 }
 
-.session-info-card-link {
+.course-info-card-link {
   position: absolute;
   top: 0;
   width: 100%;

@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
 
   def create
     @course = Course.find(params[:course_id])
-    @booking = Booking.new(session: Session.find(params[:session_id]))
+    @booking = Booking.new(course: Course.find(params[:course_id]))
     @booking.course = @course
     @booking.user = current_user
     # TODO : change this for curent user once devise is done !!!!
