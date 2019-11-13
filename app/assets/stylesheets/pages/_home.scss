@@ -31,23 +31,12 @@ p.home {
   padding-left: 38px;
 }
 
-.btn-ghost {
-  color: white;
-  border: 2px solid white;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: opacity 0.3s ease;
-  margin: 38px;
-}
-
-.btn-ghost:hover {
-  opacity: 1;
+#search-form {
+  margin: 45px;
 }
 
 
-.search-form {
-  margin: 38px;
+#search-location {
+  margin: 40px;
+  padding: 40px;
 }
-
-
