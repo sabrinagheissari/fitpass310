@@ -1,4 +1,4 @@
-.container {
+.card_container {
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -10,22 +10,21 @@
   margin-bottom: 40px;
 }
 
-p {
+ .card-booking-infos p {
   color: $rose;
 }
 
-h1 {
+.card-booking-infos h1 {
   color: $rose;
   margin-top: -5px;
 }
 
-h2 {
+.card-booking-infos h2 {
   margin-top: -5px;
 }
 
-img {
+.card-booking-infos img {
   width: 290px;
-  margin-top: 47px;
 }
 
 
@@ -34,7 +33,6 @@ img {
   width: 40%;
   height: 100%;
   top: 13%;
-  left: 60%;
   text-align: center;
 }
 
