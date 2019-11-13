@@ -13,28 +13,31 @@ Studio.destroy_all
 Studio.create! ({
   name: "Speedy Turtles",
   address: "Shibuya",
-  category: "Run Club"
+  category: "Run Club",
+  remote_photo_url: "https://images.unsplash.com/photo-1504398230496-c3bf48cdfa94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=521&q=80"
   })
+
 
 Studio.create! ({
   name: "Doug's Little Ballerinas",
   address: "Ginza",
-  category: "Ballet"
+  category: "Ballet",
+  remote_photo_url: "https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
   })
 
 Studio.create! ({
   name: "Noah's Archs",
   address: "Harujuku",
-  category: "Gymnastics"
+  category: "Gymnastics",
+  remote_photo_url: "https://images.unsplash.com/photo-1495555687398-3f50d6e79e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
   })
 
 Studio.create! ({
   name: "310.RPM",
   address: "Meguro",
-  category: "Spin"
+  category: "Spin",
+  remote_photo_url: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80"
   })
-
-
 
 
 teacher_name = ['Sabrina', 'Sriram', 'Emmanuel', 'Silvia', 'Charles']
@@ -45,8 +48,7 @@ noah_session_name = ['Backflips', 'Sriram and Noah battle', 'Balance Beams', 'Ha
 lewagon_session_name = ['Can You Keep Up', '620 RPM', 'Excelsior', 'Earn your Spaghetti, Yann']
 
 
-
-25.times do
+5.times do
 Session.create! ({
   name: turtle_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
@@ -59,7 +61,7 @@ Session.create! ({
   })
 end
 
-25.times do
+5.times do
 Session.create! ({
   name: doug_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
@@ -72,7 +74,7 @@ Session.create! ({
   })
 end
 
-25.times do
+5.times do
 Session.create! ({
   name: noah_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
@@ -85,7 +87,7 @@ Session.create! ({
   })
 end
 
-25.times do
+5.times do
 Session.create! ({
   name: lewagon_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
