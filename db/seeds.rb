@@ -48,8 +48,7 @@ noah_session_name = ['Backflips', 'Sriram and Noah battle', 'Balance Beams', 'Ha
 lewagon_session_name = ['Can You Keep Up', '620 RPM', 'Excelsior', 'Earn your Spaghetti, Yann']
 
 
-
-25.times do
+5.times do
 Session.create! ({
   name: turtle_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
@@ -62,7 +61,7 @@ Session.create! ({
   })
 end
 
-25.times do
+5.times do
 Session.create! ({
   name: doug_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
@@ -75,7 +74,7 @@ Session.create! ({
   })
 end
 
-25.times do
+5.times do
 Session.create! ({
   name: noah_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
@@ -88,7 +87,7 @@ Session.create! ({
   })
 end
 
-25.times do
+5.times do
 Session.create! ({
   name: lewagon_session_name.sample,
   time: DateTime.now.in(rand(1..14).days).beginning_of_day + rand(6..21).hours,
