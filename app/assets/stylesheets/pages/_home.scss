@@ -13,6 +13,8 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  position: relative;
+  min-height: calc(100vh - 75px);
 }
 
 h1.home {
