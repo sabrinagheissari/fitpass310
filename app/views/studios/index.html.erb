@@ -1,4 +1,4 @@
-<div class="container">
+<div class="studios-container">
 
   <div>
     <!-- for the filters -->
@@ -18,6 +18,7 @@
     <div class="map-card">
       <p>MAP</p>
         <!-- map container -->
+        <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
 
     <div class="all-studios">
@@ -26,9 +27,9 @@
 
         <div class="d-flex">
 
-          <div class="studio-card">
+          <div class="studio-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path studio.photo, height: 300, width: 400, crop: :fill %>')">
             <p><%= studio.name %></p>
-            <%# cl_image_tag studio.photo, height: 300, width: 400, crop: :fill %>
+
             <%= link_to "", studio_path(studio), class: 'studio-card-link' %>
           </div>
 
@@ -37,8 +38,8 @@
               <div>
                 <ul class="flex-column course-card p-0 m-0">
                   <div class="course-info-card">
-                  <p><%= course.name %></p>
-                  <p><%= course.time %></p>
+                  <p style="font-weight: bold"><%= course.name %></p>
+                  <p><%= course.time.strftime('%a %b %e %l %p') %></p>
                   <%= link_to "", course_path(course), class: 'course-info-card-link' %>
                   </div>
                   <div>
