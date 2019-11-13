@@ -10,9 +10,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @session = Session.find(params[:session_id])
+    @course = Course.find(params[:course_id])
     @booking = Booking.new(booking_params)
-    @booking.session = @session
+    @booking.course = @course
     @booking.user = current_user
     if @booking.save
       redirect_to booking_path(@booking)
@@ -33,6 +33,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:session_id, :user_id)
+    params.require(:booking).permit(:course_id, :user_id)
   end
 end

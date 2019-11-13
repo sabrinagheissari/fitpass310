@@ -16,15 +16,15 @@ ActiveRecord::Schema.define(version: 2019_11_12_061445) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.bigint "session_id"
+    t.bigint "course_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["session_id"], name: "index_bookings_on_session_id"
+    t.index ["course_id"], name: "index_bookings_on_course_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "sessions", force: :cascade do |t|
+  create_table "courses", force: :cascade do |t|
     t.string "name"
     t.date "time"
     t.integer "duration"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_061445) do
     t.bigint "studio_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["studio_id"], name: "index_sessions_on_studio_id"
+    t.index ["studio_id"], name: "index_courses_on_studio_id"
   end
 
   create_table "studios", force: :cascade do |t|
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_061445) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "sessions"
+  add_foreign_key "bookings", "courses"
   add_foreign_key "bookings", "users"
-  add_foreign_key "sessions", "studios"
+  add_foreign_key "courses", "studios"
 end
