@@ -13,7 +13,7 @@ Studio.destroy_all
 Studio.create! ({
   name: "Speedy Turtles",
   description: "Speedy Turtles is an awesome options for those lazy tortugas",
-  address: "Shibuya",
+  address: "Shinjuku",
   category: "Run Club",
   remote_photo_url: "https://images.unsplash.com/photo-1504398230496-c3bf48cdfa94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=521&q=80"
   })
