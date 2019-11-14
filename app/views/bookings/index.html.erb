@@ -1,5 +1,5 @@
-<div class=booking_container>
-  <h1 class="text-center mt-3">My Bookings</h1>
+<div class=booking-container>
+  <h1 class="text-center my-3">My Bookings</h1>
     <div class="icons-booking">
     <%= link_to root_path do %>
     <i class="fas fa-home"></i>
@@ -8,15 +8,18 @@
     <i class="fas fa-backward"></i>
     <% end %>
     </div>
-      <% @bookings.each do |booking| %>
-        <div class="card-my-booking">
-            <div class="card-booking-informations">
-                  <h2><strong>Class name</strong> : <%= booking.course.name %></h2>
-                  <h2><strong>When? : </strong><%= booking.course.time %></h2>
-                  <%= link_to booking_path(booking), method: :delete, data: {"confirm-swal" => "Are you sure?"} do %>
-                    <i class="far fa-trash-alt icon-rose"></i>
-                  <% end %>
-            </div>
-        </div>
-     <% end %>
+
+    <h3>Upcoming classes</h3>
+      <% @upcoming_courses.each do |course| %>
+        <%= render 'bookings/card', course: course, card_class: 'card-booking-white' %>
+      <% end %>
+
+    <h3>Past classes</h3>
+      <% @past_courses.each do |course| %>
+        <%= render 'bookings/card', course: course, card_class: 'card-booking-gray' %>
+      <% end %>
 </div>
+
+
+
+

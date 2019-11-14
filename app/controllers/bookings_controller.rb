@@ -2,7 +2,9 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy]
 
   def index
-    @bookings = Booking.all
+    @courses = current_user.courses
+    @past_courses = @courses.where('time < ?', Time.now)
+    @upcoming_courses = @courses.where('time > ?', Time.now).order(:time)
   end
 
   def show
