@@ -5,11 +5,5 @@
   <p class="home">You probably don't want to commit to one gym?</p>
   <p class="home">Join us and work out at any gym, try any workout and do it all with one pass.</p>
 
-  <div id="search-form" class="d-flex justify-content-center">
-      <%= simple_form_for :search, url: studios_path, method: "GET", html: {class: 'form-inline'} do |f| %>
-        <%= f.input :location, collection: ["", "Meguro", "Shinjuku", "Harajuku", "Ginza"], class: 'form-control form-control-lg', include_blank: false, label: false %>
-        <%= f.button :submit, 'Discover classes', class: "btn btn-rose" %>
-      <% end %>
-    </div>
-  </div>
+<%= link_to 'Book a class', studios_path, class: "btn btn-rose" %>
 </div>

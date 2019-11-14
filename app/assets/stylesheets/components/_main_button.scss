@@ -2,15 +2,21 @@
   color: white;
   background: $rose;
   border: 1px solid $rose;
-  padding: 8px 24px;
+  padding: 15px 50px;
   border-radius: 50px;
-  opacity: 0.8;
   transition: opacity 0.3s ease;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 102px;
+  display: table;
+  margin: 0 auto;
+  margin-top: 90px;
+  font-size: 20px;
 }
 
 .btn-rose:hover {
   opacity: 1;
-  color: $light-gray;
+  color: $rose;
+  background: white;
 }
+
+
