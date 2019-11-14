@@ -1,28 +1,27 @@
-// .studios-container {
-//   margin-left: 64px !important;
-//   margin-right: 64px !important;
-// }
-
-.map-card {
-  flex: 2;
-  height: 100%;
+.studios-container {
+  margin-left: 64px !important;
+  margin-right: 64px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .all-studios {
   flex: 1;
+  max-width: 70%;
 }
 
 .studio-card {
   display: flex;
   position: relative;
   background-size: cover;
+  background-position-y: 15%;
   text-align: center;
   color: white;
   font-size: 16px;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  min-height: 150px;
+  flex: 3;
+  min-height: 191px;
 }
 
 .studio-card-link {
@@ -32,9 +31,27 @@
   height: 100%;
 }
 
+.studio-info {
+  color: white;
+  font-style: italic;
+  padding: 12px;
+  display: none;
+  font-size: 13px;
+}
+
+.studio-card:hover {
+  opacity: .6 !important;
+  .studio-name {
+    display: none;
+  }
+  .studio-info {
+    display: inline-block;
+  }
+}
+
 .courses-card {
   overflow: scroll;
-  flex: 5;
+  flex: 4;
 }
 
 .course-card {
@@ -43,43 +60,62 @@
   background-size: cover;
   padding-left: 10px;
   display: flex;
-  justify-content: space-between;
-}
-
-.course-info-card {
-  height: 100%;
+  // justify-content: space-between;
   font-size: 14px;
-  color: #5F6769;
+  color: #666464;
   position: relative;
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
 
+// .course-info-card {
+//   height: 100%;
+//   font-size: 14px;
+//   color: #5F6769;
+//   position: relative;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 20px;
+// }
+
 p {
   padding: 0;
   margin: 0;
 }
-
-.course-info-card-link {
+.course-card-link {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
 
-.course-info-card:hover {
-  background-color: #E2C3C3;
-  color: white;
-}
+// .course-info-card-link {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+// }
 
 .booking-btn {
+  margin-top: 25px;
   width: 100%;
-  color: white;
-  background: $rose;
   border: 1px solid $rose;
+  padding: 6px 18px;
+  border-radius: 50px;
   opacity: 0.8;
   transition: opacity 0.3s ease;
+  color: white;
+  background: $rose;
+  display: none;
+}
+
+.course-card:hover {
+  background-color: #E2C3C3;
+  color: white;
+  .booking-btn {
+    display: inline-block;
+  }
 }
 
 .booking-btn:hover {

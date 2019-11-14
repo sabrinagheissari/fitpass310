@@ -105,7 +105,7 @@ end
 15.times do
   Course.create! ({
     name: stomp_course_name.sample,
-    time: DateTime.now.in(rand(1..4).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -118,7 +118,7 @@ end
 15.times do
   Course.create! ({
     name: doug_course_name.sample,
-    time: DateTime.now.in(rand(1..4).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -131,7 +131,7 @@ end
 15.times do
   Course.create! ({
     name: noah_course_name.sample,
-    time: DateTime.now.in(rand(1..4).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -144,7 +144,7 @@ end
 15.times do
   Course.create! ({
     name: spin_course_name.sample,
-    time: DateTime.now.in(rand(1..4).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -157,7 +157,7 @@ end
 15.times do
   Course.create! ({
     name: needle_course_name.sample,
-    time: DateTime.now.in(rand(1..4).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -170,7 +170,7 @@ end
 15.times do
   Course.create! ({
     name: swim_course_name.sample,
-    time: DateTime.now.in(rand(1..4).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -183,7 +183,7 @@ end
 15.times do
   Course.create! ({
     name: steel_course_name.sample,
-    time: DateTime.now.in(rand(1..4).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
