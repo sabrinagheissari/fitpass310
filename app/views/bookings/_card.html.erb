@@ -6,7 +6,7 @@
           <p><strong>Date : </strong><%= course.time.strftime('%a %b %e %l %p') %></p>
       </div>
       <div class="card-booking-infos-right">
-        <%= link_to booking_path(course.bookings.find_by(user: current_user)), method: :delete, data: {confirm: "Are you sure?"} do %>
+        <%= link_to booking_path(course.bookings.find_by(user: current_user)), method: :delete, data: {"confirm-swal": "Are you sure?"} do %>
           <i class="far fa-trash-alt icon-rose"></i>
         <% end %>
       </div>
