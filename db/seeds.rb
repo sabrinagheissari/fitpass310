@@ -13,6 +13,7 @@ Studio.destroy_all
 Studio.create! ({
   name: "Speedy Turtles",
   description: "Speedy Turtles is an awesome options for those lazy tortugas",
+  email: "fake_shinjuku@gomail.com",
   address: "Shinjuku",
   category: "Run Club",
   remote_photo_url: "https://images.unsplash.com/photo-1504398230496-c3bf48cdfa94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=521&q=80"
@@ -22,6 +23,7 @@ Studio.create! ({
 Studio.create! ({
   name: "Doug's Little Ballerinas",
   description: "Doug's Little Ballerinas is perfect for those who want to improve their ballet moves and have fun",
+  email: "fake_ginza@gomail.com",
   address: "Ginza",
   category: "Ballet",
   remote_photo_url: "https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
@@ -30,6 +32,7 @@ Studio.create! ({
 Studio.create! ({
   name: "Noah's Archs",
   description: "Noah's Archs is perfect for those who want to improve their ballet moves and have fun",
+  email: "fake_harajuku@gomail.com",
   address: "Harajuku",
   category: "Gymnastics",
   remote_photo_url: "https://images.unsplash.com/photo-1495555687398-3f50d6e79e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
@@ -38,6 +41,7 @@ Studio.create! ({
 Studio.create! ({
   name: "310.RPM",
   description: "310.RPM is perfect for those who want to improve their ballet moves and have fun",
+  email: "fake_meguro@gomail.com",
   address: "Meguro",
   category: "Spin",
   remote_photo_url: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80"
