@@ -14,7 +14,7 @@
                   <h2><strong>Class name</strong> : <%= booking.course.name %></h2>
                   <h2><strong>When? : </strong><%= booking.course.time %></h2>
                   <%= link_to booking_path(booking), method: :delete, data: {"confirm-swal" => "Are you sure?"} do %>
-                    <i class="far fa-trash-alt icon-rose trash-can"></i>
+                    <i class="far fa-trash-alt icon-rose"></i>
                   <% end %>
             </div>
         </div>

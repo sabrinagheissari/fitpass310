@@ -9,11 +9,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 
-// document.querySelectorAll('.trash-can').forEach((trash) => {
-//   trash.addEventListener("click", (event) => {
-//     Swal.fire("deleted");
-//   });
-// });
+
 const handleConfirm = function(element) {
     if (!allowAction(this)) {
       Rails.stopEverything(element)
