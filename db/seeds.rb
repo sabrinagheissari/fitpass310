@@ -13,6 +13,7 @@ Studio.destroy_all
 hiit = Studio.create! ({
   name: "HIIT it!",
   description: "HIIT it! is a high intensity interval training studio, perfect for those who are looking for a high-calorie burn workout in a short period of time. Unlike other HIIT studios we offer beginner, intermediate, and advanced classes. Join us. HIIT it. Get it.",
+  email: "fake_shinjuku@gomail.com",
   address: "Shinjuku",
   category: "High Intensity Interval Training",
   remote_photo_url: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fallisonolms%2Ffiles%2F2018%2F10%2FEquinox-TIERX_BATTLEROPES_JACOBSUTTON.jpg"
@@ -30,6 +31,7 @@ stomp = Studio.create! ({
 doug = Studio.create! ({
   name: "Doug's Little Ballerinas",
   description: "Doug is a well renound ballet dancer from Missouri, having danced swan lake every Christmas since he was 12. He has a passion for teaching young ballet dancers and ballerinas to make it in Tokyo. Your children will be in good hands with Doug and his associates.",
+  email: "fake_ginza@gomail.com",
   address: "Ginza",
   category: "Ballet",
   remote_photo_url: "https://scontent-nrt1-1.xx.fbcdn.net/v/t31.0-8/30171049_10155816985119440_7078030717394408257_o.jpg?_nc_cat=100&_nc_oc=AQnk8vurkftfHU4TMHjELDnco8IRNROqq--B8ukKlId4QGTf1kvgXwMp0gZ15QWBDIo&_nc_ht=scontent-nrt1-1.xx&oh=36036fad4e5c89a1c8d2bbd45e9a0c21&oe=5E8C4DBA"
@@ -39,6 +41,8 @@ noah = Studio.create! ({
   name: "Noah's Archs",
   description: "Noah's Archs is a gymnastics arena that has graduated many famous gymnasts from Tokyo. We are proud to sponsor the 2020 Games.",
   address: "Shibuya",
+  email: "fake_harajuku@gomail.com",
+  address: "Harajuku",
   category: "Gymnastics",
   remote_photo_url: "http://www.firststategymnastics.com/uploads/7/4/1/9/74197027/9212134.jpg"
   })
@@ -46,6 +50,7 @@ noah = Studio.create! ({
 rpm = Studio.create! ({
   name: "310.RPM",
   description: "310.RPM is an intense spin class modeled after our sister club, SoulCycle, in New York City. We are changing the spin game in Tokyo. Wake up to an instructor shouting instructions with disco jams, or come get revived after a long boring day in front of the computer.",
+  email: "fake_meguro@gomail.com",
   address: "Meguro",
   category: "Spinning",
   remote_photo_url: "https://media.cdn-equinox.com/website/cycling2018/2/cycling-intro-2-x1.jpg"
