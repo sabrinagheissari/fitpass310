@@ -35,6 +35,7 @@ const handleConfirm = function(element) {
       text: text || '',
       type: 'warning',
       showCancelButton: true,
+      confirmButtonColor: '#BA7E7E',
       confirmButtonText: 'Yes',
       cancelButtonText: 'Cancel',
     }).then(result => confirmed(element, result))
