@@ -9,3 +9,21 @@
 
 }
 
+.rose-studio{
+
+ color: white;
+ border: 1px solid #d1a1a1;
+ padding: 8px 24px;
+ border-radius: 50px;
+ font-weight: bold;
+ opacity: 0.6;
+ transition: opacity 0.3s ease;
+ margin: auto;
+ background: #BA7E7E;
+}
+
+.rose-studio:hover {
+  opacity: 1;
+  color: $rose;
+  background: white;
+}

@@ -1,62 +1,35 @@
-<div class="studios-container">
+<div class="studios-container d-flex">
+  <div id="map" style="width: 400px; height: 100vh; position: sticky; top: 0px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-  <div>
-    <!-- for the filters -->
-    <div>
-        <!-- location filter -->
-    </div>
-    <div>
-        <!-- category filter -->
-    </div>
-    <div>
-        <!-- time filter -->
-    </div>
-  </div>
-
-  <div class="d-flex">
-      <!-- overall container for map, studios and courses -->
-    <div class="map-card">
-        <!-- map container -->
-        <div id="map" style="width: 100%; height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    </div>
-
-    <div class="all-studios">
-
+  <div class="all-studios">
       <% @studios.each do |studio| %>
-
         <div class="d-flex">
-
           <div class="studio-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path studio.photo, height: 300, width: 400, crop: :fill %>')">
-            <p><%= studio.name %></p>
-
+            <p class="studio-name"><%= studio.name %></p>
             <%= link_to "", studio_path(studio), class: 'studio-card-link' %>
+            <p class="studio-info"><%= studio.description %></p>
           </div>
 
           <div class=" d-flex courses-card">
             <% studio.courses.order("time").each do |course| %>
               <div>
                 <ul class="flex-column course-card p-0 m-0">
-                  <div class="course-info-card">
-                  <p style="font-weight: bold"><%= course.name %></p>
-                  <p><%= course.time.strftime('%a %b %e %l %p') %></p>
-                  <%= link_to "", course_path(course), class: 'course-info-card-link' %>
-                  </div>
+                  <!-- <div class="course-info-card"> -->
+                    <p style="font-weight: bold"><%= course.name %></p>
+                    <p><%= course.time.strftime('%A, %b %d') %></p>
+                    <p><%= course.time.strftime('%l %p') %></p>
+                    <%= link_to "", course_path(course), class: 'course-card-link' %>
+                  <!-- </div> -->
                   <div>
-                  <%= simple_form_for [course, Booking.new] do |f| %>
-                    <%= f.submit "Book", class: 'booking-btn' %>
-                  <% end %>
+                    <%= simple_form_for [course, Booking.new] do |f| %>
+                      <%= f.submit "Book", class: 'booking-btn' %>
+                    <% end %>
                   </div>
                 </ul>
               </div>
             <% end %>
           </div>
-
         </div>
-
       <% end %>
-
     </div>
-
-  </div>
-
-</div>]
+</div>
