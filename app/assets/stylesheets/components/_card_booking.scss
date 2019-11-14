@@ -1,40 +1,41 @@
-.card_container {
-  position: relative;
-  margin: auto;
+.card-booking {
   overflow: hidden;
-  width: 520px;
-  height: 350px;
-  background: $white;
-  box-shadow: 5px 5px 15px rgba($rose, .5);
-  border-radius: 10px;
-  margin-bottom: 40px;
+  height: 128px;
+  background: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 20px 16px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  padding: 10px;
 }
 
- .card-booking-infos p {
-  color: $rose;
+.card-booking-white {
+  background: white;
+}
+.card-booking-gray {
+  background-color: #d9d9d9;
+  background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
 }
 
-.card-booking-infos h1 {
-  color: $rose;
-  margin-top: -5px;
+.card-booking:hover {
+  transform: scale(1.1)
 }
 
-.card-booking-infos h2 {
-  margin-top: -5px;
+.card-booking .card-booking-infos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.card-booking-infos img {
-  width: 290px;
-}
-
-
-.card-booking-infos {
-  position: absolute;
-  width: 40%;
+.card-booking .card-booking-infos-left {
   height: 100%;
-  top: 13%;
-  text-align: center;
+  max-width: 70%;
 }
 
-
-
+.card-booking .card-booking-infos-right {
+  height: 100%;
+  margin-right: 30px;
+  align-items: center;
+}

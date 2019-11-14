@@ -1,30 +1,13 @@
-.booking_container h1 {
-  color: $rose;
-
-}
-
-.card-my-booking {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  margin-top: 60px;
-  margin-left: 396px;
-  margin-right: 60px;
-  width: 530px;
-}
-
-.card-my-booking h2 {
-  font-size: 16px;
-  margin: 0;
-  margin-bottom: 0;
-  margin-top: 8px;
-  padding-bottom: 10px;
-}
-
-.card-my-booking .card-booking-informations {
-  padding: 16px;
+.booking-container {
+  width: 700px;
+  margin: 0 auto;
+  h1 {
+    color: $rose;
+  }
+  h3 {
+    color: #B4B3B3;
+    margin: 26px;
+  }
 }
 
 .icons-booking {
@@ -39,4 +22,8 @@
 
 .icon-rose {
   color: $rose;
+}
+
+#past-class {
+  background-color: $light-gray;
 }
