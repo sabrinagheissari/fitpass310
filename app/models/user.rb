@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
   belongs_to :studio, optional: true
   has_many :courses, through: :bookings
+  has_many :reviews
 end
