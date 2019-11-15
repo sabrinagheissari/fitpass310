@@ -10,15 +10,25 @@
     </div>
 
     <h3>Upcoming classes</h3>
+    <% if @upcoming_courses.any? %>
       <% @upcoming_courses.each do |course| %>
         <%= render 'bookings/card', course: course, card_class: 'card-booking-white' %>
       <% end %>
+    <% else %>
+      <div class='card-booking card-booking-white'>
+        <p>No upcoming class yet! Make sure you book <%= link_to "one", studios_path %>!</p>
+      </div>
+    <% end %>
 
+    <h3>Past classes</h3>
     <% if @past_courses.any? %>
-      <h3>Past classes</h3>
       <% @past_courses.each do |course| %>
         <%= render 'bookings/card', course: course, card_class: 'card-booking-gray' %>
       <% end %>
+    <% else %>
+      <div class='card-booking card-booking-white'>
+        <p>No past class!</p>
+      </div>
     <% end %>
 </div>
 
