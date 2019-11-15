@@ -93,6 +93,7 @@ swim_course_name = ['Butterfly', 'Resistance', 'Lungs of Steel', 'Fast and Frees
 steel_course_name = ['IRON MADEN', 'MA WHERES THE PROTEIN?', 'GODZILLA', 'ARNOLD']
 
 
+
 15.times do
   Course.create! ({
     name: hiit_course_name.sample,
