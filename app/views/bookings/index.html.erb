@@ -14,10 +14,12 @@
         <%= render 'bookings/card', course: course, card_class: 'card-booking-white' %>
       <% end %>
 
-    <h3>Past classes</h3>
+    <% if @past_courses.any? %>
+      <h3>Past classes</h3>
       <% @past_courses.each do |course| %>
         <%= render 'bookings/card', course: course, card_class: 'card-booking-gray' %>
       <% end %>
+    <% end %>
 </div>
 
 
