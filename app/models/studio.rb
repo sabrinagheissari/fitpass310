@@ -4,4 +4,7 @@ class Studio < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  CATEGORY = Studio.select(:category).map(&:category).uniq.reject(&:blank?)
+  LOCATION = Studio.select(:address).map(&:address).uniq.reject(&:blank?)
 end

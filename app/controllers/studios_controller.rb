@@ -2,10 +2,10 @@ class StudiosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @studios = Studio.geocoded
-    @search = params["search"]
-    if @search.present?
-      @location = @search["location"]
-      @studios = Studio.where("address ILIKE ?", "%#{@location}%")
+    if params[:search].present?
+      @location = params[:search][:location]
+      @category = params[:search][:category]
+      @studios = Studio.where("address ILIKE ? AND category ILIKE ?", "%#{@location}%", "%#{@category}%")
     end
 
     @markers = @studios.map do |studio|
