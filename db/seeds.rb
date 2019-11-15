@@ -40,7 +40,6 @@ doug = Studio.create! ({
 noah = Studio.create! ({
   name: "Noah's Archs",
   description: "Noah's Archs is a gymnastics arena that has graduated many famous gymnasts from Tokyo. We are proud to sponsor the 2020 Games.",
-  address: "Shibuya",
   email: "fake_harajuku@gomail.com",
   address: "Harajuku",
   category: "Gymnastics",
@@ -97,7 +96,7 @@ steel_course_name = ['IRON MADEN', 'MA WHERES THE PROTEIN?', 'GODZILLA', 'ARNOLD
 15.times do
   Course.create! ({
     name: hiit_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -110,7 +109,7 @@ end
 15.times do
   Course.create! ({
     name: stomp_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -123,7 +122,7 @@ end
 15.times do
   Course.create! ({
     name: doug_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -136,7 +135,7 @@ end
 15.times do
   Course.create! ({
     name: noah_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -149,7 +148,7 @@ end
 15.times do
   Course.create! ({
     name: spin_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -162,7 +161,7 @@ end
 15.times do
   Course.create! ({
     name: needle_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -175,7 +174,7 @@ end
 15.times do
   Course.create! ({
     name: swim_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
@@ -188,7 +187,7 @@ end
 15.times do
   Course.create! ({
     name: steel_course_name.sample,
-    time: DateTime.now.in(rand(1..7).days).beginning_of_day + rand(6..21).hours,
+    time: DateTime.now.in(rand(1..7).days).beginning_of_day + (9/24.0) + rand(6..21).hours,
     duration: rand(60..120),
     price: rand(15..30),
     capacity: rand(10..25),
