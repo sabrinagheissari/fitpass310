@@ -7,8 +7,10 @@ class ReviewsController < ApplicationController
 
   def create
     @course = Course.find(params[:course_id])
+    @studio = @course.studio
     @review = Review.new(set_params)
     @review.course = @course
+    @review.user = current_user
     if @review.save
       redirect_to studio_path(@studio)
     else

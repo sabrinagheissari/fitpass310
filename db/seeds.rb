@@ -196,3 +196,19 @@ end
     studio: steel
   })
 end
+
+Course.create! ({
+  name: spin_course_name.sample,
+  time: Date.today - 2,
+  duration: rand(60..120),
+  price: rand(15..30),
+  capacity: rand(10..25),
+  difficulty: difficulty.sample,
+  teacher_name: teacher_name.sample,
+  studio: rpm
+})
+
+Booking.create! ({
+  course_id: Course.last.id,
+  user_id: User.last.id
+})
