@@ -6,10 +6,17 @@
           <p><strong>Date : </strong><%= course.time.strftime('%a %b %e %l %p') %></p>
       </div>
       <div class="card-booking-infos-right">
-        <%= link_to booking_path(course.bookings.find_by(user: current_user)), method: :delete, data: {"confirm-swal": "Are you sure?"} do %>
-          <i class="far fa-trash-alt icon-rose"></i>
+        <% if past_course %>
+          <%= link_to studios_path do %>
+            <i class="far fa-comment icon-rose"></i>
+          <% end %>
+        <% else %>
+          <%= link_to booking_path(course.bookings.find_by(user: current_user)), method: :delete, data: {"confirm-swal": "Are you sure?"} do %>
+            <i class="far fa-trash-alt icon-rose"></i>
+          <% end %>
         <% end %>
       </div>
     </div>
 </div>
+
 
