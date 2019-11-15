@@ -117,10 +117,27 @@ p {
   display: none;
 }
 
+.booked-btn {
+  margin-top: 15px;
+  width: 100%;
+  border: 1px solid white;
+  padding: 6px 18px;
+  border-radius: 50px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  font-style: italic;
+  color: $rose;
+  background: white;
+  display: none;
+}
+
 .course-card:hover {
   background-color: #E2C3C3;
   color: white;
   .booking-btn {
+    display: inline-block;
+  }
+  .booked-btn {
     display: inline-block;
   }
   .extra-info {

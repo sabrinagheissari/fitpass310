@@ -11,7 +11,7 @@
 
 .rose-studio{
 
- color: white;
+ color: $rose;
  border: 1px solid #d1a1a1;
  padding: 8px 40px;
  border-radius: 50px;
@@ -19,11 +19,54 @@
  opacity: 0.6;
  transition: opacity 0.3s ease;
  margin: auto;
- background: #BA7E7E;
+ background: white;
 }
 
-.rose-studio:hover {
+
+.rose-studio-copy{
+
+ color: $rose;
+ border: 1px solid white;
+ padding: 8px 40px;
+ border-radius: 50px;
+ font-weight: bold;
+ opacity: 0.6;
+ transition: opacity 0.3s ease;
+ margin: auto;
+ background: white;
+}
+
+
+.rose_studio_category{
+ color: $rose;
+ border: 1px solid #d1a1a1;
+ padding: 8px 40px;
+ border-radius: 50px;
+ font-weight: bold;
+ opacity: 0.6;
+ transition: opacity 0.3s ease;
+ margin: auto;
+ background: white;
+ margin-left: 24px;
+}
+
+
+.rose_studio_button{
+ color: $rose;
+ border: 1px solid #d1a1a1;
+ padding: 6px 36px;
+ border-radius: 4px;
+ font-weight: bold;
+ opacity: 0.6;
+ transition: opacity 0.3s ease;
+ margin: auto;
+ background: white;
+ margin-left: 24px;
+}
+
+.rose_studio_button:hover {
   opacity: 1;
   color: $rose;
   background: white;
 }
+
