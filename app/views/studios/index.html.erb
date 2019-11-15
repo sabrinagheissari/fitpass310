@@ -26,16 +26,22 @@
           <div class=" d-flex courses-card">
             <% studio.courses.order("time").each do |course| %>
               <div>
+                <div><%@flag = @bookings.any? {|booking| booking.course_id == course.id} %></div>
                 <ul class="flex-column course-card p-0 m-0">
                   <!-- <div class="course-info-card"> -->
-                    <p style="font-weight: bold"><%= course.name %></p>
+                    <p style="font-weight: bold"><%= course.name %><%@flag%></p>
                     <p><%= course.time.strftime('%A, %b %d') %></p>
                     <p><%= course.time.strftime('%l %p') %></p>
                     <%= link_to "", course_path(course), class: 'course-card-link' %>
                   <!-- </div> -->
                   <div>
-                    <%= simple_form_for [course, Booking.new] do |f| %>
-                      <%= f.submit "Book", class: 'booking-btn' %>
+                    <%if @flag == false%>
+                      <%= simple_form_for [course, Booking.new] do |f| %>
+                        <%= f.submit "Book", class: 'booking-btn' %>
+                      <% end %>
+                    <% else  %>
+                      <%= simple_form_for [course, Booking.new] do |f| %>
+                      <% end %>
                     <% end %>
                   </div>
                 </ul>
