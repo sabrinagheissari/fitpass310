@@ -97,8 +97,15 @@ p {
 //   height: 100%;
 // }
 
+.extra-info {
+  display: none;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
 .booking-btn {
-  margin-top: 25px;
+  margin-top: 15px;
   width: 100%;
   border: 1px solid $rose;
   padding: 6px 18px;
@@ -114,6 +121,9 @@ p {
   background-color: #E2C3C3;
   color: white;
   .booking-btn {
+    display: inline-block;
+  }
+  .extra-info {
     display: inline-block;
   }
 }

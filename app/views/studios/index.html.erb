@@ -32,7 +32,8 @@
                     <p style="font-weight: bold"><%= course.name %></p>
                     <p><%= course.time.strftime('%A, %b %d') %></p>
                     <p><%= course.time.strftime('%l %p') %></p>
-                    <%= link_to "", course_path(course), class: 'course-card-link' %>
+                    <p class ="extra-info"><%= course.teacher_name %> - <%= course.duration %> min - $<%= course.price %></p>
+                   <!--  <#%= link_to "", course_path(course), class: 'course-card-link' %> -->
                   <!-- </div> -->
                   <div>
                     <%= simple_form_for [course, Booking.new] do |f| %>
