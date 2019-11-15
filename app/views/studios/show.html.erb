@@ -43,7 +43,7 @@
     </div>
   </div>
 
-    <h1><center>Available Slots</center></h1>
+  <h1><center>Available Slots</center></h1>
     <div class="row justify-content-md-center">
       <div class="col-md-6">
 
@@ -70,57 +70,47 @@
         </div>
       </div>
 
-  <div class="card">
-      <div class="card-body">
-        <h2 id="bott" class="text-center">Reviews</h2>
-          <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center">
-            <img src="https://avatars1.githubusercontent.com/u/55873437?v=4" class="avatare m-3"/>
-            <div class="w-50">
-              <a><strong>The gym stinks</strong></a>
-              <div class="d-flex">
-                <i class="far fa-star" id="golden_star"></i>
-                <i class="far fa-star" id="golden_star"></i>
-                <i class="far fa-star" id="golden_star"></i>
-              </div>
+
+  <h2 id="bott" class="text-center">Reviews</h2>
+  <div class="justify-content-center mr-5">
+    <ul>
+    <% @course_teacher_reviews.each do |course_name, teacher_reviews| %>
+      <div>
+        <h4 style="color: #D6B2B1"><%= course_name %></h4>
+        <ul>
+          <% teacher_reviews.each do |teacher_name, reviews| %>
+            <div>
+              <p style="color: #D6B2B1"><strong>Teacher: </strong><em><%= teacher_name %></em></p>
+              <ul>
+                <% reviews.each do |review| %>
+                  <div>
+                    <div class="card p-3 m-3">
+                        <div class="d-flex align-items-center">
+                          <img src="https://avatars1.githubusercontent.com/u/55873437?v=4" class="avatar m-3"/>
+                          <div class="w-50">
+                            <a><strong><%= review.title %></strong></a>
+                          <div class="d-flex">
+                            <% review.rating.times do %>
+                              <i class="far fa-star" id="golden_star"></i>
+                            <% end %>
+                          </div>
+                          </div>
+                            <p><%= review.content %></p>
+                            <a style="text-decoration:none;" class="rose-studio ml-2" href="#"> Like</a>
+                            <a style="text-decoration:none;"class="rose-studio ml-2"  href="#">Review</a>
+                          </div>
+                  </div>
+                <% end %>
+              </ul>
             </div>
-            <p>Bad customer service - They are all liars there. The people at the front desk are horrible.
-                    Me and my friend signed up last year and the lady said that we can cancel anytime provided we gave 60 days notice.
-                    I emailed the manager to say I would like to cancel. Nobody got back to me but they kept taking the money from my
-                    account and today they called me telling me that I was behind on payments. When I called World Gym they were so rude.
-                    The women was so mean. I would never recommend anyone to have a membership with them.</p>
-            <a style="text-decoration:none;" class="rose-studio ml-2" href="#"> Like</a>
-            <a style="text-decoration:none;"class="rose-studio ml-2"  href="#">Review</a>
-          </div>
+          <% end %>
+        </ul>
       </div>
-  </div>
-</div>
-
-
-
-<% @course_teacher_reviews.each do |course_name, teacher_reviews| %>
-  <%= course_name %>
-    <% teacher_reviews.each do |teacher_name, reviews| %>
-      <%= teacher_name %>
-        <% reviews.each do |review| %>
-          <%= review.user.name %>
-          <%= review.content %>
-        <% end %>
     <% end %>
-<% end %>
+    </ul>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
