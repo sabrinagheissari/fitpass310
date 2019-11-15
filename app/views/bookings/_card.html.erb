@@ -7,7 +7,7 @@
       </div>
       <div class="card-booking-infos-right">
         <% if past_course %>
-          <%= link_to studios_path do %>
+          <%= link_to new_course_review_path(course) do %>
             <i class="far fa-comment icon-rose"></i>
           <% end %>
         <% else %>
