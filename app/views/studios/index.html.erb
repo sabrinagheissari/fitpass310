@@ -1,13 +1,13 @@
-<div class="container p-2">
+<div class="justify-content-center d-flex">
 <%= simple_form_for :search, url: studios_path, method:'GET', html: {class: 'form-inline'} do |f| %>
-    <div class="form-group mb-2 mx-2">
-          <%= f.input :category, collection: Studio::CATEGORY, class: 'form-control', required: false, selected: @category, include_blank: 'All' %>
+    <div class="form-group mb-2 mx-2 rose-studio-copy">
+          <%= f.input :category, collection: Studio::CATEGORY, input_html: {class: 'form-control rose_studio_category'}, required: false, selected: @category, include_blank: 'All' %>
     </div>
-    <div class="form-group mx-2 mb-2">
-          <%= f.input :location, collection: Studio::LOCATION, class: 'form-control mr-2', required: false, selected: @location, include_blank: 'All' %>
+    <div class="form-group mx-2 mb-2 rose-studio-copy">
+          <%= f.input :location, collection: Studio::LOCATION, input_html: {class: 'form-control mr-2 rose_studio_category'}, required: false, selected: @location, include_blank: 'All' %>
     </div>
     <div class="form-group">
-          <%= f.submit "Search", class: "btn rose-studio btn-search mb-2 mx-2" %>
+          <%= f.submit "Search", class: "btn rose_studio_button mb-2 mx-2" %>
     </div>
       <% end %>
 </div>
@@ -43,6 +43,7 @@
                       <% end %>
                     <% else  %>
                       <%= simple_form_for [course, Booking.new] do |f| %>
+                      <%= f.submit "Booked ", class: 'booked-btn' %>
                       <% end %>
                     <% end %>
                   </div>
