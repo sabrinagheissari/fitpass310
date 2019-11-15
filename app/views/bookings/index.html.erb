@@ -12,7 +12,7 @@
     <h3>Upcoming classes</h3>
     <% if @upcoming_courses.any? %>
       <% @upcoming_courses.each do |course| %>
-        <%= render 'bookings/card', course: course, card_class: 'card-booking-white' %>
+        <%= render 'bookings/card', course: course, card_class: 'card-booking-white', past_course: false %>
       <% end %>
     <% else %>
       <div class='card-booking card-booking-white'>
@@ -23,7 +23,7 @@
     <h3>Past classes</h3>
     <% if @past_courses.any? %>
       <% @past_courses.each do |course| %>
-        <%= render 'bookings/card', course: course, card_class: 'card-booking-gray' %>
+        <%= render 'bookings/card', course: course, card_class: 'card-booking-gray', past_course: true %>
       <% end %>
     <% else %>
       <div class='card-booking card-booking-white'>
