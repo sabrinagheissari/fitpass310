@@ -2,6 +2,7 @@ class StudiosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @studios = Studio.geocoded
+    @bookings = current_user.bookings
     if params[:search].present?
       @location = params[:search][:location]
       @category = params[:search][:category]
@@ -28,3 +29,5 @@ class StudiosController < ApplicationController
     pp @course_teacher_reviews
   end
 end
+
+

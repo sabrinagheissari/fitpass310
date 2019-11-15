@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @courses = current_user.courses
+    @flag = ""
     @past_courses = @courses.where('time < ?', Time.now)
     @upcoming_courses = @courses.where('time > ?', Time.now).order(:time)
   end
