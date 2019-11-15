@@ -10,6 +10,8 @@ Course.destroy_all
 
 Studio.destroy_all
 
+User.destroy_all
+
 hiit = Studio.create! ({
   name: "HIIT it!",
   description: "HIIT it! is a high intensity interval training studio, perfect for those who are looking for a high-calorie burn workout in a short period of time. Unlike other HIIT studios we offer beginner, intermediate, and advanced classes. Join us. HIIT it. Get it.",
@@ -196,6 +198,43 @@ end
     studio: steel
   })
 end
+
+
+user = User.new
+user.email = 'sabrina@gmail.com'
+user.password = 'fitness'
+user.password_confirmation = 'fitness'
+user.save!
+
+user = User.new
+user.email = 'silvia@gmail.com'
+user.password = 'fitness'
+user.password_confirmation = 'fitness'
+user.save!
+
+user = User.new
+user.email = 'emmanuel@gmail.com'
+user.password = 'fitness'
+user.password_confirmation = 'fitness'
+user.save!
+
+user = User.new
+user.email = 'fitness@gmail.com'
+user.password = 'fitness'
+user.password_confirmation = 'fitness'
+user.save!
+
+user = User.new
+user.email = 'lewagon@gmail.com'
+user.password = 'fitness'
+user.password_confirmation = 'fitness'
+user.save!
+
+user = User.new
+user.email = 'sriram@gmail.com'
+user.password = 'fitness'
+user.password_confirmation = 'fitness'
+user.save!
 
 Course.create! ({
   name: spin_course_name.sample,
