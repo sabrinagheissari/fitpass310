@@ -19,5 +19,8 @@ class StudiosController < ApplicationController
 
   def show
     @studio = Studio.find(params[:id])
+    reviews = @studio.reviews.includes(:course, :user)
+    course_reviews = reviews.group_by { |r| r.course.name }
+    @course_teacher_reviews = course_reviews.map { |k,v| [k, v.group_by { |r| r.course.teacher_name } ]}.to_h
   end
 end

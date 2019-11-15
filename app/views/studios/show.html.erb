@@ -97,3 +97,57 @@
       </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% @course_teacher_reviews.each do |course_name, teacher_reviews| %>
+  <%= course_name %>
+    <% teacher_reviews.each do |teacher_name, reviews| %>
+      <%= teacher_name %>
+        <% reviews.each do |review| %>
+          <%= review.user.name %>
+          <%= review.content %>
+        <% end %>
+    <% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
