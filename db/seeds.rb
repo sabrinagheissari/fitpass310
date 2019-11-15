@@ -197,7 +197,3 @@ end
     studio: steel
   })
 end
-
-
-
-
